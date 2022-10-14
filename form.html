@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Samuel SS">
+    <link
+        href="https://fonts.googleapis.com/css2? família=Comfortaa&family=Open+Sans:wght@400;700&family=Raleway:wght@400;600&display=swap"
+        rel="stylesheet">
+    <title>Form Upload DEV PRO</title>
+    <link rel="icon" type="image/x-icon" href="imagens/favicon.png">
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            font-family: 'Comfortaa', cursive;
+            font-family: 'Open Sans', sans-serif;
+            font-family: 'Raleway', sans-serif;
+            color: #f1f1f1;
+        }
+
+        body {
+            background-color: #212E36;
+            position: relative;
+        }
+
+        section div {
+            height: 100vh;
+            position: relative;
+        }
+
+        nav {
+            height: 35px;
+            display: block;
+            margin: 10px 0;
+        }
+
+        nav img {
+            height: 20px;
+            float: right;
+            margin-right: 5px;
+        }
+
+        .flex {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .row {
+            flex-direction: row;
+        }
+
+        .column {
+            flex-direction: column;
+        }
+
+        form {
+            text-align: center;
+            margin: 50px 0;
+            width: max-content;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        form input[type=file]::-webkit-file-upload-button {
+            background-color: #212E36;
+            color: #f1f1f1;
+            height: 35px;
+            width: 120px;
+            border-radius: 100px;
+            border: 1px solid #02b3e7;
+            margin: 5px 2px;
+            font-size: .9em;
+            cursor: pointer;
+        }
+
+        form button[type=submit] {
+            width: 100%;
+            height: 35px;
+            margin-top: 10px;
+            background-color: #204a57;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            letter-spacing: 1.5px;
+            font-size: .9em;
+            transition: ease-in-out .35s;
+            box-shadow: 0px 0px 6px rgba(0,0,0,.1);
+            color: rgba(255, 255, 255, .25);
+        }
+
+        form input[type=file]:valid~button[type=submit] {
+            cursor: pointer;
+            animation: mymove ease-in-out infinite 3s;
+            background-color: #02b3e7;
+            color: rgba(241, 241, 241, 1);
+            box-shadow: 0px 0px 3px #02b3e7;
+        }
+
+        @keyframes mymove {
+            50% {
+                box-shadow: 0px 0px 10px #02b3e7;
+            }
+        }
+
+
+        #logo {
+            height: 150px;
+        }
+
+        #upload {
+            height: 20px;
+            margin: 0 5px;
+        }
+
+        aside {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="flex column">
+            <img src="imagens/logo.png" alt="logo da DEV PRO" id="logo">
+            <form action="https://formsubmit.co/9c818e601caaaa628b9547c5bf32876b" method="post"
+                enctype="multipart/form-data">
+                <aside class="flex row">
+                    <p>Selecione o arquivo</p><img src="imagens/up.png" alt="upload de arquivo" id="upload"><br>
+                </aside>
+
+                <input class="flex row" type="file" id="myfile" name="attachment" required accept="image/png, image/jpeg" multiple>
+                <button type="submit" id="enviar">Enviar</button>
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="https://rwsnxrcep7cf9tosb8zhfq.on.drv.tw/Imprimir/Upload/obrigado.html">
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>
